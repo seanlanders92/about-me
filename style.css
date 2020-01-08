@@ -12,7 +12,13 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     float: left;
     width: 35vw;
-    padding-top: 0vw;
-    
-    
+    padding-top: 0vw;    
+}
+img{
+width: 25%;
+height: auto;
+float: right;
+border-style: solid;
+border-radius: 2vw;
+
 }
