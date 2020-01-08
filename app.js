@@ -47,3 +47,32 @@ if (low5 === 'yes' || low5 === 'y'){
 }
 
 alert('Well ' +greeting+ ', it looks like you made it to the end of the test good job.');
+
+
+var i=0;
+var answer = 10;
+while(i<4){
+  var question6 = prompt('How many countries have I been to?');
+  i++;
+  if(question6 === '10'){ alert('correct good job.');
+    i=4;
+  } else if(question6 < answer){ alert('Too low try again.');
+  } else if(question6 > answer) { alert('Too High.');
+  } else if(i===4){ alert('The correct answer is 10.');
+  }
+}
+
+var answers = ['300zx', '260z', '240z', '280z', 'GTR', 'nissan']
+var x=0
+
+while(x<6){
+  var question7 = prompt('What are my favorite cars?');
+  x++;
+  if(question7 == answers){ alert('Good job! You win!')
+    x=6;
+  }else{ alert('Incorrect Try again.');
+
+  }else if(x===4){ alert('Heres a hint, try an older Nissan Sports car!');
+
+  }
+}
