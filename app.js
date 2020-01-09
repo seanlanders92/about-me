@@ -69,13 +69,13 @@ while(i<4){
   }
 }
 
-var answers = ['300zx', '260z', '240z', '280z', 'GTR', 'Nissan'];
+var answers = ['300zx', '260z', '240z', '280z', 'gtr', 'nissan'];
 var x=0;
 
 while(x<6){
   var question7 = prompt('What are my favorite cars?');
   x++;
-  if(answers.includes(question7)){ alert('Good job! You win! Here are the acceptable answers ' +answers+'.');
+  if(answers.includes(question7.toLowerCase)){ alert('Good job! You win! Here are the acceptable answers ' +answers+'.');
     x=6;
     correctanswers++;
   }else if(x===4){alert('Try an older Nissan sports car.');

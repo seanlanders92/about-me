@@ -14,10 +14,17 @@ p{
     width: 35vw;
     padding-top: 0vw;    
 }
+
+article{
+    background-color: rgba(134, 134, 134, 0.336);
+    box-shadow: 1px -2px 2px 10px rgba(134, 134, 134, 0.336);
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+}
 img{
 width: 25%;
 height: auto;
-float: right;
+float: left;
 border-style: solid;
 border-radius: 2vw;
 
