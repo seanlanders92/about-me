@@ -1,5 +1,6 @@
 'use strict';
 
+var correctanswers=[];
 var greeting = prompt('Welcome! What is your name?');
 //console.log(greeting);
 alert('Hello ' +greeting+ ' You will now be given a series of 5 questions to prove yourself!');
@@ -9,6 +10,7 @@ var low1 = question1.toLowerCase();
 
 if (low1 === 'yes' || low1 === 'y') {
   alert('CORRECT! Now for a harder one!');
+  correctanswers++;
 } else {
   alert('Incorrect try again!');
 }
@@ -18,6 +20,7 @@ var low2 = question2.toLowerCase();
 if (low2 === 'no' || low2 === 'n'){
 // console.log(question2);
   alert('It used to be until I moved to Japan. Now it\'s WoW.');
+  correctanswers++;
 } else {
   alert('Incorrect try again!');
 }
@@ -26,6 +29,7 @@ var low3 = question3.toLowerCase();
 if (low3 === 'yes' || low3 === 'y'){
 //  console.log(question3);
   alert('Indeed I was, for 8 years.');
+  correctanswers++;
 } else {
   alert('Incorrect try again!');
 }
@@ -34,6 +38,7 @@ var low4 = question4.toLowerCase();
 if (low4 === 'yes' || low4 === 'y'){
 //  console.log(question4);
   alert('Correct. Fun fact Virginia is one of 4 commonwealths in the USA.');
+  correctanswers++;
 } else {
   alert('Incorrect try again!');
 }
@@ -42,6 +47,7 @@ var low5 = question5.toLowerCase();
 if (low5 === 'yes' || low5 === 'y'){
 //  console.log(question5);
   alert('I did, but there\'s no way you could have known that.');
+  correctanswers++;
 } else {
   alert('Incorrect, but there\'s no way you could have known that. Yes it was real cobra blood.');
 }
@@ -54,25 +60,27 @@ var answer = 10;
 while(i<4){
   var question6 = prompt('How many countries have I been to?');
   i++;
-  if(question6 === '10'){ alert('correct good job.');
+  if(question6 === '10'){ alert('Correct good job.');
     i=4;
+    correctanswers++;
   } else if(question6 < answer){ alert('Too low try again.');
   } else if(question6 > answer) { alert('Too High.');
   } else if(i===4){ alert('The correct answer is 10.');
   }
 }
 
-var answers = ['300zx', '260z', '240z', '280z', 'GTR', 'nissan']
-var x=0
+var answers = ['300zx', '260z', '240z', '280z', 'GTR', 'Nissan'];
+var x=0;
 
 while(x<6){
   var question7 = prompt('What are my favorite cars?');
   x++;
-  if(question7 == answers){ alert('Good job! You win!')
+  if(answers.includes(question7)){ alert('Good job! You win! Here are the acceptable answers ' +answers+'.');
     x=6;
-  }else{ alert('Incorrect Try again.');
-
-  }else if(x===4){ alert('Heres a hint, try an older Nissan Sports car!');
-
+    correctanswers++;
+  }else if(x===4){alert('Try an older Nissan sports car.');
+  }else if(x===6){alert('Sorry, try again sometime here are the correct answers ' +answers+'.');
+  }else{alert('Try again');
   }
 }
+alert('Congrats! You got ' +correctanswers+ ' out of 7 questions correct.');
