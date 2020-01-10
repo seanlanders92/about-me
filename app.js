@@ -24,7 +24,7 @@ function question1(){
 function question2(){
   var question2 = prompt(questionsAll[1]);
   var low2 = question2.toLowerCase();
-  if (low2.includes(no)){
+  if (no.includes(low2)){
     alert('It used to be until I moved to Japan. Now it\'s WoW.');
     correctanswers++;
   } else {
@@ -68,6 +68,7 @@ function question5(){
     location.reload(true);
   }
 }
+
 function question6(){
   var i=0;
   var answer = 10;
@@ -83,14 +84,15 @@ function question6(){
     }
   }
 }
+
 function question7(){
   var answers = ['300zx', '260z', '240z', '280z', 'gtr', 'nissan'];
   var x=0;
   while(x<6){
     var question7 = prompt(questionsAll[6]);
-    //var realq7 = question7.toLowerCase;
+    var realq7 = question7.toLowerCase();
     x++;
-    if(answers.includes(question7)){ alert('Good job! You win! Here are the acceptable answers ' +answers+'.');
+    if(answers.includes(realq7)){ alert('Good job! You win! Here are the acceptable answers ' +answers+'.');
       x=6;
       correctanswers++;
     }else if(x===4){alert('Try an older Nissan sports car.');
@@ -107,4 +109,4 @@ question4();
 question5();
 question6();
 question7();
-alert('Congrats! You got ' +correctanswers+ ' out of 7 questions correct.');
+alert('Congrats! You got ' +correctanswers+ ' out of' +questionsAll.length+ 'questions correct.');
