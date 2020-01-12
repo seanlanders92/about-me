@@ -109,4 +109,4 @@ question4();
 question5();
 question6();
 question7();
-alert('Congrats! You got ' +correctanswers+ ' out of' +questionsAll.length+ 'questions correct.');
+alert('Congrats! You got ' +correctanswers+ ' out of ' +questionsAll.length+ ' questions correct.');
